@@ -1,13 +1,13 @@
 ---
 title: 'about'
-date: 2019-1-27 16:21:13
-lang: 'en'
+date: 2019-10-27
+lang: 'ko'
 ---
 
-# Your name
+# 임예찬 (Yechan Lim)
 
 <div align="center">
 
-_Thank you for reading my resume. If you want to contact me, Please send me an email._
+_업데이트 중입니다._
 
 </div>

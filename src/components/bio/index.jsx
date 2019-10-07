@@ -45,6 +45,11 @@ export const Bio = () => (
                       Facebook
                     </a>
                   )}
+                  {social.instagram && (
+                    <a href={`https://www.instagram.com/${social.instagram}`}>
+                      Instagram
+                    </a>
+                  )}
                 </p>
               </div>
             </div>
@@ -57,7 +62,7 @@ export const Bio = () => (
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile.png/" }) {
+    avatar: file(absolutePath: { regex: "/profile.jpeg/" }) {
       childImageSharp {
         fixed(width: 72, height: 72) {
           ...GatsbyImageSharpFixed
@@ -73,6 +78,7 @@ const bioQuery = graphql`
           github
           medium
           facebook
+          instagram
         }
       }
     }
