@@ -1,0 +1,1 @@
+{"data":{"site":{"siteMetadata":{"title":"Good Day to Code","configs":{"countOfInitialPost":10}}},"allMarkdownRemark":{"edges":[{"node":{"excerpt":"First Post Test","fields":{"slug":"/development/first/"},"frontmatter":{"date":"October 07, 2019","title":"First Post","category":"development"}}}]}},"pageContext":{"isCreatedByStatefulCreatePages":true}}
