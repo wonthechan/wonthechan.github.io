@@ -22,7 +22,6 @@ export default ({ data }) => {
         )}`,
       }}
     >
-      <div dangerouslySetInnerHTML={{ __html: resume.html }} />
     </div>
   )
 }
