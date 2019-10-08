@@ -19,7 +19,7 @@ script:
 after_script:
   - greenkeeper-lockfile-upload
 after_success:
-  - npm run lh -- --perf=90 --pwa=100 --no-comment https://gatsby-starter-bee.netlify.com/
+  - npm run lh -- --perf=90 --pwa=100 --no-comment https://wonthechan.github.io/
 branches:
   only:
     - master
