@@ -22,5 +22,5 @@ after_success:
   - npm run lh -- --perf=90 --pwa=100 --no-comment https://wonthechan.github.io/
 branches:
   only:
-    - master
+    - develop
     - /^greenkeeper.*$/
