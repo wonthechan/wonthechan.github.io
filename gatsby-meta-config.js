@@ -1,8 +1,8 @@
 module.exports = {
-  title: `Good Day to Code`,
-  description: `개발을 공부하면서 반복되는 삽질을 피하기 위하고 작은 깨달음들을 공유하기 위해 그때그때마다 기록하고 있습니다.`,
+  title: `chan's devlog`,
+  description: `조금씩 끄적이는 개발로그`,
   author: `wonthechan (Yechan Lim)`,
-  introduction: `웹 풀스택 개발을 지향하며 조금씩 자주 공부해 나가고 있는 학생입니다. 주로 파이썬과 자바, 그리고 C++을 많이 사용하며 최근에는 데이터 엔지니어링 및 분석 분야에 관심이 많습니다.`,
+  introduction: `Slow but steady..`,
   siteUrl: `https://wonthechan.github.io`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
@@ -12,10 +12,10 @@ module.exports = {
     instagram: 'chaaaniiiiii', // Your Instagram account
   },
   icon: `content/assets/felog.png`, // Add your favicon
-  keywords: ['frontend', 'backend', `blog`],
+  keywords: [`blog`],
   comment: {
     disqusShortName: '',
-    utterances: '', // Your repository for archive comment
+    utterances: 'wonthechan/wonthechan.github.io', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
