@@ -15,7 +15,7 @@ module.exports = {
   keywords: ['frontend', 'backend', `blog`],
   comment: {
     disqusShortName: '',
-    utterances: 'wonthechan/wonthechan.github.io', // Your repository for archive comment
+    utterances: '', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
