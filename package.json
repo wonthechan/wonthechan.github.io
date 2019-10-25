@@ -1,11 +1,11 @@
 {
   "name": "gatsby-starter-bee",
   "private": true,
-  "description": "Gatsby blog starter template",
+  "description": "Gatsby blog",
   "version": "0.1.0",
-  "author": "Jbee[JaeYeopHan]<ljyhanll@gmail.com>",
+  "author": "wonthechan[YechanLim]<yeschanlim@naver.com>",
   "bugs": {
-    "url": "https://github.com/JaeYeopHan/gatsby-starter-bee/issues"
+    "url": "https://github.com/wonthechan/wonthechan.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.2.8",
@@ -14,7 +14,7 @@
     "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-lodash": "^3.0.5",
     "gatsby-plugin-manifest": "^2.0.24",
-    "gatsby-plugin-offline": "^3.0.11",
+    "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.30",
@@ -62,7 +62,7 @@
     "recursive-readdir": "^2.2.2",
     "signale": "^1.3.0"
   },
-  "homepage": "https://github.com/JaeYeopHan/gatsby-starter-bee#readme",
+  "homepage": "https://github.com/wonthechan/wonthechan.github.io",
   "keywords": [
     "gatsby"
   ],
@@ -70,7 +70,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaeYeopHan/gatsby-starter-bee.git"
+    "url": "git+https://github.com/wonthechan/wonthechan.github.io.git"
   },
   "scripts": {
     "post": "node ./cli/create-new-post.js",
