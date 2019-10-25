@@ -9,3 +9,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s, color 0.3s;
 }
+
+.post-title > time {
+  float: right;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.thumbnail-date {
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

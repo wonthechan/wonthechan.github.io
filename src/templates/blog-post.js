@@ -12,6 +12,7 @@ import { PostNavigator } from '../components/post-navigator'
 import { Disqus } from '../components/disqus'
 import { Utterences } from '../components/utterances'
 import * as ScrollManager from '../utils/scroll'
+import { divideDateAndPath } from '../utils/frontmatter'
 
 import '../styles/code.scss'
 
@@ -25,11 +26,12 @@ export default ({ data, pageContext, location }) => {
   const metaData = data.site.siteMetadata
   const { title, comment, siteUrl, author, sponsor } = metaData
   const { disqusShortName, utterances } = comment
-
+  const date = post.frontmatter.date
+  
   return (
     <Layout location={location} title={title}>
       <Head title={post.frontmatter.title} description={post.excerpt} />
-      <PostTitle title={post.frontmatter.title} />
+      <PostTitle title={post.frontmatter.title} date={post.frontmatter.date} />
       <PostContainer html={post.html} />
       <SocialShare title={post.frontmatter.title} author={author} />
       <Elements.Hr />
@@ -65,6 +67,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 280)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
