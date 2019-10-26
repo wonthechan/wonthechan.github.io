@@ -26,7 +26,7 @@ MVC는 Model과 View와 Controller를 지칭하는 용어이다.
 
 Rails의 MVC 아키텍쳐가 동작하는 일련의 과정을 도식화하여 표현하면 다음과 같다.
 
-![image-20191026190222094](C:\Users\packe\AppData\Roaming\Typora\typora-user-images\image-20191026190222094.png)
+![image-20191026190222094](../../assets/ror-mvc.png)
 
 
 
