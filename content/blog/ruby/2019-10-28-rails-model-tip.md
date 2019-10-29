@@ -1,5 +1,5 @@
 ---
-title: '[RoR] 모델(Model)에 새로운 컬럼(Column) 추가하는 법'
+title: '[RoR] 모델(Model) 업데이트 Tip - 컬럼(column) 관련'
 date: 2019-10-29
 category: 'ruby'
 ---
@@ -26,6 +26,30 @@ rake db:migrate
 
 
 
+**(추가) 이미 존재하는 컬럼의 default 값을 설정 하고 싶은 경우**
+
+1) 마이그레이션 파일을 생성한다.
+
+```ruby
+rails g migration SetDefault
+```
+
+2) 아래의 형식에 맞춰 파일을 작성한다.
+
+```ruby
+class SetDefault < ActiveRecord::Migration
+  def change
+    change_column :table_name, :column_name, :type, default: "Your value"
+  end
+end
+```
+
+3) 변경 적용을 위해 마이그레이션 진행
+
+```ruby
+rake db:migrate
+```
+
 
 
 
@@ -34,3 +58,4 @@ rake db:migrate
 > *    https://stackoverflow.com/questions/14371633/adding-more-fields-to-an-existing-model 
 > *    [https://relaxwrighting.tistory.com/entry/RUBY-ON-RAILS-Model-%EC%88%98%EC%A0%95-%EC%BB%AC%EB%9F%BC-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0](https://relaxwrighting.tistory.com/entry/RUBY-ON-RAILS-Model-수정-컬럼-추가하기) 
 > *    https://guides.rubyonrails.org/active_record_migrations.html 
+> *    https://stackoverflow.com/questions/1186400/how-to-set-default-values-in-rails?rq=1 
