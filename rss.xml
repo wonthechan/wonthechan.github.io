@@ -1,4 +1,109 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Oct 2019 10:17:38 GMT</lastBuildDate><item><title><![CDATA[about]]></title><description><![CDATA[임예찬 (Yechan Lim) 업데이트 중입니다.]]></description><link>https://wonthechan.github.io/resume-en/</link><guid isPermaLink="false">https://wonthechan.github.io/resume-en/</guid><pubDate>Sun, 27 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;임예찬-yechan-lim&quot;&gt;&lt;a href=&quot;#%EC%9E%84%EC%98%88%EC%B0%AC-yechan-lim&quot; aria-label=&quot;임예찬 yechan lim permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;임예찬 (Yechan Lim)&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 30 Oct 2019 00:27:50 GMT</lastBuildDate><item><title><![CDATA[[RoR] 모델(Model) 업데이트 Tip - 컬럼(column) 관련]]></title><description><![CDATA[이미 만들어둔 모델에 새로운 컬럼을 추가하는 법을 몰라서 필요할때마다 destroy 하고 모델을 다시 생성하는 식으로 했는데.. 번거롭기도 하고 이건 뭔가 아닌거 같아서 구글링해보니 방법이 바로 나왔다.! Active Record Migrations…]]></description><link>https://wonthechan.github.io/ruby/2019-10-28-rails-model-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-10-28-rails-model-tip/</guid><pubDate>Tue, 29 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이미 만들어둔 모델에 새로운 컬럼을 추가하는 법을 몰라서 필요할때마다 destroy 하고 모델을 다시 생성하는 식으로 했는데.. 번거롭기도 하고 이건 뭔가 아닌거 같아서 구글링해보니 방법이 바로 나왔다.!&lt;/p&gt;
+&lt;h2 id=&quot;active-record-migrations&quot;&gt;&lt;a href=&quot;#active-record-migrations&quot; aria-label=&quot;active record migrations permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Active Record Migrations&lt;/h2&gt;
+&lt;p&gt;이미 만들어둔 모델의 이름이 &lt;strong&gt;Post&lt;/strong&gt;이고 새로 추가하려는 컬럼의 이름이 &lt;strong&gt;title&lt;/strong&gt;이라면&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;rails g migration &lt;span class=&quot;token constant&quot;&gt;AddTitleToPost&lt;/span&gt; title&lt;span class=&quot;token symbol&quot;&gt;:string&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이런식으로 하면 된다. 실행 후에는 db 폴더내에 새로운 마이그레이션 rb 파일이 생긴다.&lt;/p&gt;
+&lt;p&gt;최종적으로 적용을 위해서는 마이그레이션을 다시 진행해 주어야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;rake db:migrate&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;(추가) 이미 존재하는 컬럼의 default 값을 설정 하고 싶은 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;마이그레이션 파일을 생성한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;rails g migration &lt;span class=&quot;token constant&quot;&gt;SetDefault&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;아래의 형식에 맞춰 파일을 작성한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;SetDefault&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;Migration&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; change
+    change_column &lt;span class=&quot;token symbol&quot;&gt;:table_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:column_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; default&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Your value&quot;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;변경 적용을 위해 마이그레이션 진행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;rake db&lt;span class=&quot;token symbol&quot;&gt;:migrate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;References&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/14371633/adding-more-fields-to-an-existing-model&quot;&gt;https://stackoverflow.com/questions/14371633/adding-more-fields-to-an-existing-model&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://relaxwrighting.tistory.com/entry/RUBY-ON-RAILS-Model-%EC%88%98%EC%A0%95-%EC%BB%AC%EB%9F%BC-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0&quot;&gt;https://relaxwrighting.tistory.com/entry/RUBY-ON-RAILS-Model-%EC%88%98%EC%A0%95-%EC%BB%AC%EB%9F%BC-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://guides.rubyonrails.org/active_record_migrations.html&quot;&gt;https://guides.rubyonrails.org/active&lt;em&gt;record&lt;/em&gt;migrations.html&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/1186400/how-to-set-default-values-in-rails?rq=1&quot;&gt;https://stackoverflow.com/questions/1186400/how-to-set-default-values-in-rails?rq=1&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[RoR] 구름 IDE에서 Ruby on Rails 사용하기 - 초기 설정법]]></title><description><![CDATA[구름 IDE를 이용해서 빠르게 레일즈 컨테이너를 생성하는 법과 초기 설정법에 대해 정리해 보았다. 컨테이너 생성 위와 같이 체크하고 컨테이너 생성을 진행하면 3 ~ 5분 정도의 시간이 소요된다. 접속 URL…]]></description><link>https://wonthechan.github.io/ruby/2019-10-28-rails-goormide-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-10-28-rails-goormide-tip/</guid><pubDate>Mon, 28 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;구름 IDE를 이용해서 빠르게 레일즈 컨테이너를 생성하는 법과 초기 설정법에 대해 정리해 보았다.&lt;/p&gt;
+&lt;h2 id=&quot;컨테이너-생성&quot;&gt;&lt;a href=&quot;#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;컨테이너 생성 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;컨테이너 생성&lt;/h2&gt;
+&lt;p&gt;&lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 125.04273504273505%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAAsSAAALEgHS3X78AAACTElEQVQ4y41Ui3LjIAzM/3/k3VznkraJbUCAHoCdW+w2adqkPUZx8JjVSiuJXSllbvN5XbVWZi6lLufz8h9rJ6pzaxsYjmKMOeVS2zwvP9pu87GBW5utFDOb57dYvlkd/PH94uX8H2GDYIffBYMN0i51xnML6HvbdcHeg8RxU2VrLArXP0a+MzVodhUssY8QvNTa8Fj/IedyH/wxVUgVY+p6pwxyZsHGrDxkVlV4317YZrXS1iWiSAfJ4wCc3gfXHtdbnbUAbHUNFoTAbIos83KpwVaHdXMrmJUuWOneugOEffF7nxngEEhEOrO1kGcjn5JSIlFxMahWK1WIinDLFM2ROpMGit1W7o2cUjkMyv7V+TQOB+fd7/2eCP3KYZqYSIZhyMchHeEK+d10WBVp3r2MwfnglaKkUz6qNGU9SSW2Zy8sOUvkLBDkBox8c5QYKIbkCJTZkZOskoWyJUYu2OSYsezKvFWavJyew+KncJj2f+g05hTD8WjTCM7qg9TX/RhlSjI+Mcdb5szmQ6KkPtr4NPgpeRctksZY29J7rtdurWRpc7udqph1dMkFDbHwr79xotMxmB/Uj9fwPrXnVbA6p8imBe2V1JgVbIriF8w5Wv1qSBjD/1mwcexFPp2mw+FlnAJLYbHMCnU/WsqK4D+BLSXMWHWOvI+QYAXfM0YXtxuwsDoXRQpFhgtsHhmuyS9gsWnq/Qj+7RD2yOWr4VMHoz3R/dtIv7dqvxmhx/t6fPWiUybn1uui39uEzseVQISRYhEfwrIsj6bqHwD1uYptYTZlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Capture1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2a43fb4d39558dc743df34ef1a3971f3/e41c6/Capture1.png&quot;
+        srcset=&quot;/static/2a43fb4d39558dc743df34ef1a3971f3/7c8aa/Capture1.png 148w,
+/static/2a43fb4d39558dc743df34ef1a3971f3/1e920/Capture1.png 295w,
+/static/2a43fb4d39558dc743df34ef1a3971f3/e41c6/Capture1.png 590w,
+/static/2a43fb4d39558dc743df34ef1a3971f3/8067e/Capture1.png 885w,
+/static/2a43fb4d39558dc743df34ef1a3971f3/693a5/Capture1.png 1170w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위와 같이 체크하고 컨테이너 생성을 진행하면 3 ~ 5분 정도의 시간이 소요된다.&lt;/p&gt;
+&lt;h2 id=&quot;접속-url-및-포트-설정&quot;&gt;&lt;a href=&quot;#%EC%A0%91%EC%86%8D-url-%EB%B0%8F-%ED%8F%AC%ED%8A%B8-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;접속 url 및 포트 설정 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;접속 URL 및 포트 설정&lt;/h2&gt;
+&lt;p&gt;컨테이너 실행 후 상단 네비게이션 바에서 프로젝트 - 속성을 클릭해서 들어가면 다음과 같은 창이 뜬다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 77.625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsSAAALEgHS3X78AAAB2ElEQVQoz5WSCY7UMBBFc4dhlk7ciZfYTuzYztK7pjcYYAYhhBACToDEAZA4BeLI/JDp1gwCREsv1eW0/68qO1G3vbPzragXB5YHFv9Atqu8WUZSacp4xhhAQmlGGaWMMS6O0L8QzZYbbb0snVAlL7xq9qreCNNlPD8gWa7/hIqW27vd8zfdfG/rlTKhna+7xQY/LrShnbq6q0KDfVTIAdilTCDpxevdzf7mNtcFFTnLpS6tUFoVBrKyCq5uC+tzXQ6gu9IF6zzPJYXY+qaZLArrfokVlojausX11jeTbraqQlsYX9oAkDST2e7lWz/dZIxHD9tArnsXKVRRmMBlOaa8H1vcg2pxEq8/ftt8+EpIHEHDpQb3Guu0ccYF42vra7R63MBlgYilkIoPM+M5gv88RrVOlVYWBgcARxSPx2mS0hFJSYYbFWcJOSNj/lAMJXbA8snF5SghlW9QH0bnl1dXMUGERZyMz0n6zoRPVXuRsUeV+/GYSMYZIvovK5yqikmK9wS+2EAFYeJZ1byo2piJR+JjC8PFQoM4LIdD6RPYMTGilP828/8AC6mtaa6ZLE4US51RaqdPX3/5IbQ9uXJ/Vdo0+/fKzyJ8ISeBT0UZf/v5e7V89RPq9JLtMRIv3wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Capture2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6d0a099376577e3ce19ee0a5e22cb4f9/e41c6/Capture2.png&quot;
+        srcset=&quot;/static/6d0a099376577e3ce19ee0a5e22cb4f9/7c8aa/Capture2.png 148w,
+/static/6d0a099376577e3ce19ee0a5e22cb4f9/1e920/Capture2.png 295w,
+/static/6d0a099376577e3ce19ee0a5e22cb4f9/e41c6/Capture2.png 590w,
+/static/6d0a099376577e3ce19ee0a5e22cb4f9/71e5e/Capture2.png 800w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;먼저 밑에 이미 추가 되어 있던 등록정보는 휴지통 버튼을 눌러 삭제 해준다.&lt;/p&gt;
+&lt;p&gt;그리고나서 URL 칸에는 자신이 원하는 주소를 채워 넣고 &lt;strong&gt;PORT&lt;/strong&gt;란에는 반드시 &lt;strong&gt;80번&lt;/strong&gt;을 적어주어야 웹으로 접속할 수 있게 된다.&lt;/p&gt;
+&lt;p&gt;마지막으로 등록과 적용 버튼을 차례로 눌러주면 세팅 끝!&lt;/p&gt;
+&lt;p&gt;이후 해당 URL로 접속하면 다음과 같은 인덱스 페이지를 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 89.81092436974791%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAClElEQVQ4y4WTyU9TURTG+0eIWCQQkioJcUhITNz5L7gwcefKpQsJShTKVMe40JU7oiuDLoiJRo0SI2kkSNBCgVJqSxnK0L620OG9Dm/oz1uQ0pmTfO+8971zzr3fveeY2jsu0HnpMucudmJp7+Bsx3la2yyYm1own27hlLmZhhONNJw0CzTR0FgJc1MzLa1tWM5YMFkHhhh+8Igh20N6+wexDg7TJ7h+4a0Dg9wX791DNrqt/XT13KOr+24p7vTQ29eLzTbMi+ePMXGc7e0ij41h+HyQTh8bbjIMA8PI/YdR8Iemh0IkxseRp6bQJanAH8QeIZdHLocp/yhH3oLBIJuBDVYDAbbjcaREgrXNAEsuFyGxSN6q5RYklxdMpVIkZRk5qZCMJ1CSMsmEzO5uTCjPlOTwP2df8uEP8SwNKqykCN0SOW1H6IwLIiuglW3gKKeoYLE30NU9jMwKWtqDmnKTVVxoyqLgPPucoSeplmsq33qe1tUgRtaDHFtme3WRDa+Lv/MO1v2LRKQVUgkPesYrLiNdocpUTuSDMrKbgG+OJecs89N2Fr5/4M/EFxxTduZ/T+Oe+cVeeAFDi9YveMDFCa07mJ2YxOtzMuUbwe55yaR7BK9nEb/Lx/LkDNLWEjk9uq+o7g4zmR3cvq98cz5jdO4afmlSnAG4tj7z1nmdj67bjM7eYHXnnbibSL2CB80cS23y3nWT144rvHFcJRR3I8VWmPa/wr72hJ8bT/nkucUP/7A4HrW25GKv6gqKKqFoYbKaUnPMCnnlbVOtqJ7NiVtOEQ5GiIaj7EajRKJhZCWBqmXLGpvSxq4smEPXNVQ1K7x+MKuC1zTt6LtoVxWSa0mpZ7ViTDXPpcrgl897taL/AONsHV/I5U0+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Capture3&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d871f42569e213da77a7a65a5262161e/e41c6/Capture3.png&quot;
+        srcset=&quot;/static/d871f42569e213da77a7a65a5262161e/7c8aa/Capture3.png 148w,
+/static/d871f42569e213da77a7a65a5262161e/1e920/Capture3.png 295w,
+/static/d871f42569e213da77a7a65a5262161e/e41c6/Capture3.png 590w,
+/static/d871f42569e213da77a7a65a5262161e/8067e/Capture3.png 885w,
+/static/d871f42569e213da77a7a65a5262161e/b7ea5/Capture3.png 952w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[about]]></title><description><![CDATA[임예찬 (Yechan Lim) 업데이트 중입니다.]]></description><link>https://wonthechan.github.io/resume-en/</link><guid isPermaLink="false">https://wonthechan.github.io/resume-en/</guid><pubDate>Sun, 27 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;임예찬-yechan-lim&quot;&gt;&lt;a href=&quot;#%EC%9E%84%EC%98%88%EC%B0%AC-yechan-lim&quot; aria-label=&quot;임예찬 yechan lim permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;임예찬 (Yechan Lim)&lt;/h1&gt;
 &lt;div align=&quot;center&quot;&gt;
 &lt;p&gt;&lt;em&gt;업데이트 중입니다.&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;</content:encoded></item><item><title><![CDATA[[Scala] 스칼라 스터디 #1]]></title><description><![CDATA[ 스칼라에서의 메소드 형태와 패턴매칭 기법에 대해서 간략하게 알아보고 이를 이용해 재귀와 반복문 형태의 팩토리얼과 피보나치수를 구하는 메소드를 작성해보자. 1.1 일반적인 재귀형태를 이용하여 팩토리얼을 구하는 메소드 1.…]]></description><link>https://wonthechan.github.io/scala/2019-10-26-scala-study-01/</link><guid isPermaLink="false">https://wonthechan.github.io/scala/2019-10-26-scala-study-01/</guid><pubDate>Sat, 26 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt; 스칼라에서의 메소드 형태와 패턴매칭 기법에 대해서 간략하게 알아보고 이를 이용해 재귀와 반복문 형태의 팩토리얼과 피보나치수를 구하는 메소드를 작성해보자.&lt;/p&gt;
