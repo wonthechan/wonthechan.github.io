@@ -1,31 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Nov 2019 08:08:53 GMT</lastBuildDate><item><title><![CDATA[[RoR] 레일즈에서 One-to-many Association 생성하기]]></title><description><![CDATA[위처럼 하나의 Post가 여러개의 Memo를 가지는 One-to-Many Association을 만들어보려고 API…]]></description><link>https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</guid><pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;../../assets/2019-10-28-rails-model-associations-tip/Capture_1.png&quot; alt=&quot;one-to-many-erd&quot;&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 05 Nov 2019 08:18:07 GMT</lastBuildDate><item><title><![CDATA[[RoR] 레일즈에서 One-to-many Association 생성하기]]></title><description><![CDATA[위처럼 하나의 Post가 여러개의 Memo를 가지는 One-to-Many Association을 만들어보려고 API…]]></description><link>https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</guid><pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 48.9010989010989%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABEElEQVQoz41T6YqGMAzs+z+S/8RHUPD6IYIo3rfimY8J1O2WXXcDoWnaTqbTVNz3Tdd10XmePMLUOdbhMDX+zQQOhmFIvu+T4zhkmiYFQUCe51EURc/Gv4AeQLBI05SSJGEHeBzHDFYUBY3jSPu+f2P45gx4HAdN08QHkWyahsGQ37aNr/9fY0AcyvOc+r5n0K7rqK5rzsOQH4aB43VduaB07JUx9gswQtC2Lc3zzKyWZXliFMyyjAvCyrIk27bJdV0yDIMsy2K9oT8whE5ZFV+PwR7FwBY3kOygd1VVXwz1ltDbQ+oMLTHi2gCTc7BHIczF24v91C4AgKboDICAFdiiCNbE24vpjNVPoLrMYf0D/h8KG80x5WsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;one-to-many-erd&quot;
+        title=&quot;&quot;
+        src=&quot;/static/49b7ad2f1fc95aa49d30cdc4115f2d31/e41c6/capture_1.png&quot;
+        srcset=&quot;/static/49b7ad2f1fc95aa49d30cdc4115f2d31/7c8aa/capture_1.png 148w,
+/static/49b7ad2f1fc95aa49d30cdc4115f2d31/1e920/capture_1.png 295w,
+/static/49b7ad2f1fc95aa49d30cdc4115f2d31/e41c6/capture_1.png 590w,
+/static/49b7ad2f1fc95aa49d30cdc4115f2d31/8067e/capture_1.png 885w,
+/static/49b7ad2f1fc95aa49d30cdc4115f2d31/a1289/capture_1.png 1092w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;위처럼 하나의 Post가 여러개의 Memo를 가지는 One-to-Many Association을 만들어보려고 API를 비롯한 여러 문서들을 뒤져보았으나 레일즈 버전 차이때문인지 계속 실패하는 문제가 발생..&lt;/p&gt;
 &lt;p&gt;계속 헤매다 결국 작동하는 방법을 찾아냈고 그 과정을 아래에 정리해 보았다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;참고: 레일즈 버전 5.2.3 에서 진행 되었음&lt;/strong&gt; &lt;/p&gt;
 &lt;h2 id=&quot;one-to-many-association&quot;&gt;&lt;a href=&quot;#one-to-many-association&quot; aria-label=&quot;one to many association permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;One-to-many Association&lt;/h2&gt;
-&lt;blockquote&gt;
 &lt;p&gt;가장 먼저 Post 모델을 생성&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;rails g model &lt;span class=&quot;token constant&quot;&gt;Post&lt;/span&gt; title&lt;span class=&quot;token symbol&quot;&gt;:string&lt;/span&gt; content&lt;span class=&quot;token symbol&quot;&gt;:text&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt; 그 다음 Many side에 해당하는 Memo 모델을 생성한다.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;그 다음 Many side에 해당하는 Memo 모델을 생성한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;rails g model &lt;span class=&quot;token constant&quot;&gt;Memo&lt;/span&gt; post&lt;span class=&quot;token symbol&quot;&gt;:references&lt;/span&gt; title&lt;span class=&quot;token symbol&quot;&gt;:string&lt;/span&gt; content&lt;span class=&quot;token symbol&quot;&gt;:text&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
 &lt;p&gt;여기 &lt;strong&gt;post:reference&lt;/strong&gt;  부분에서 Post의 id값을 참조하는 외래키 설정을 Memo 모델에 자동으로 해주게 된다.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt; 변경사항 적용을 위해 마이그레이션을 진행한다.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;변경사항 적용을 위해 마이그레이션을 진행한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;rake db&lt;span class=&quot;token symbol&quot;&gt;:migrate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
 &lt;p&gt;마이그레이션이 끝나면 추가적으로 프로젝트의 config/models 디렉토리 내에 존재하는 post.rb와 memo.rb 파일을 수정해주어야 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;config/models/post.rb&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;has_many &lt;span class=&quot;token symbol&quot;&gt;:memos&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:dependent&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:destroy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
 &lt;p&gt;위와 같은 코드를 해당 파일의 클래스내에 넣어 준다. 이때 memo가 아닌 memo&lt;strong&gt;s&lt;/strong&gt; 임을 주의하자. (복수형)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
 &lt;p&gt;delete on cascade 옵션을 추가해주기 위해 &lt;strong&gt;:dependent =&gt; :destroy&lt;/strong&gt; 를 명시해주었다. (선택사항)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;em&gt;config/models/memo.rb&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;belongs_to &lt;span class=&quot;token symbol&quot;&gt;:post&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
 &lt;p&gt;마찬가지로 위의 코드를 해당 파일의 클래스에 넣어 준다.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;이제 다음 명령어를 통해 1번 id를 가진 post를 참조하는 memo를 생성할 수 있다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;@memo&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;memos&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token symbol&quot;&gt;:title&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;memoTitle&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token symbol&quot;&gt;:content&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;memoContent&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;또는 해당 post를 참조하는 모든 memo를 불러오거나 삭제하고 싶은 경우 다음과 같이 쓸 수 있다.&lt;/p&gt;
@@ -34,7 +55,7 @@
 
 &lt;span class=&quot;token variable&quot;&gt;@post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;memos&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;size &lt;span class=&quot;token comment&quot;&gt;# @post가 가진 모든 메모의 개수를 리턴&lt;/span&gt;
 &lt;span class=&quot;token variable&quot;&gt;@post&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;memos&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;clear &lt;span class=&quot;token comment&quot;&gt;# @post가 가진 모든 메모를 삭제&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;이외에 더 자세한 메소드 사용은 아래 API 링크를 참고하자!&lt;/p&gt;
+&lt;p&gt;이외에 더 자세한 사항들은 아래 API 링크를 참고하자!&lt;/p&gt;
 &lt;p&gt; &lt;a href=&quot;https://rubykr.github.io/rails_guides/association_basics.html#has_many-association-reference&quot;&gt;https://rubykr.github.io/rails&lt;em&gt;guides/association&lt;/em&gt;basics.html#has_many-association-reference&lt;/a&gt; &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;References&lt;/p&gt;
