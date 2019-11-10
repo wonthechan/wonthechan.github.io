@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 09 Nov 2019 10:16:34 GMT</lastBuildDate><item><title><![CDATA[[RoR] 레일즈에서 One-to-many Association 생성하기]]></title><description><![CDATA[위처럼 하나의 Post가 여러개의 Memo를 가지는 One-to-Many Association을 만들어보려고 API…]]></description><link>https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</guid><pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 10 Nov 2019 13:25:45 GMT</lastBuildDate><item><title><![CDATA[[RoR] 더이상 쓸모없는 마이그레이션 파일 깔끔하게 지우기]]></title><description><![CDATA[모델을 다루다보면 새로운 칼럼을 추가하거나 삭제하는 일들이 빈번하게 생긴다. 그럴때마다 마이그레이션 파일을 새로 만들게 되는데 이전 마이그레이션 파일들을 지우고 싶을 때가 있다.! 그래서 migrate…]]></description><link>https://wonthechan.github.io/ruby/2019-11-07-rails-model-migration-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-11-07-rails-model-migration-tip/</guid><pubDate>Sat, 09 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/1034/1*usnQlDE-gCOmT7okziMfwQ.png&quot; alt=&quot;마이그레이션 파일들&quot;&gt;&lt;/p&gt;
+&lt;p&gt;모델을 다루다보면 새로운 칼럼을 추가하거나 삭제하는 일들이 빈번하게 생긴다. 그럴때마다 마이그레이션 파일을 새로 만들게 되는데 이전 마이그레이션 파일들을 지우고 싶을 때가 있다.!&lt;/p&gt;
+&lt;p&gt;그래서 migrate폴더에서 해당 마이그레이션 파일만 지우면 되겠지 싶었는데 그 이후로 자꾸 Missing Migration.. 과 같은 에러 메세지가 뜨면서 뭔가 확실히 안지워진 느낌에 찝찝해서 확실히 지워버리는 방법을 찾아보았다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;참고: 레일즈 버전 5.2.3 에서 진행 되었음&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;일단 다음 명령어를 통해 현재 마이그레이션 파일들의 상태를 확인할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;rails db&lt;span class=&quot;token symbol&quot;&gt;:migrate&lt;/span&gt;&lt;span class=&quot;token symbol&quot;&gt;:status&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;문제가 되는 지우고 싶은 마이그레이션의 version값(파일이름의 날짜부분)을 따로 적어 두고 해당 파일을 지워버린다.&lt;/p&gt;
+&lt;p&gt;그다음 dbconsole에 접속하여 적어둔 버전에 해당하는 레코드를 삭제하면 끝!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ruby&quot;&gt;&lt;pre class=&quot;language-ruby&quot;&gt;&lt;code class=&quot;language-ruby&quot;&gt;delete from schema_migrations where version&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;version&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sqlite3 기준&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;다시 status를 찍어보면 해당 마이그레이션이 더 이상 보이지 않게 된다!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;References&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/learning-to-code-one-bug-at-a-time/fixing-database-mistakes-in-ruby-on-rails-cddca130a38a&quot;&gt;https://medium.com/learning-to-code-one-bug-at-a-time/fixing-database-mistakes-in-ruby-on-rails-cddca130a38a&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[[RoR] 레일즈에서 One-to-many Association 생성하기]]></title><description><![CDATA[위처럼 하나의 Post가 여러개의 Memo를 가지는 One-to-Many Association을 만들어보려고 API…]]></description><link>https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-11-05-rails-model-associations-tip/</guid><pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
     class=&quot;gatsby-resp-image-wrapper&quot;
     style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
   &gt;
