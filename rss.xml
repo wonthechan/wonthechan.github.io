@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 11 Nov 2019 14:39:03 GMT</lastBuildDate><item><title><![CDATA[42 Seoul - 온라인 테스트 후기]]></title><description><![CDATA[웹서핑 도중에 우연찮게 발견한  42 Seoul .  정부 주도로 설립된 ‘이노베이션 아카데미’라는 기관에서 올해 새롭게 추진되는 SW 인재 양성 프로젝트라고 한다.  école 4…]]></description><link>https://wonthechan.github.io/daily/2019-11-11-daily-42seoul/</link><guid isPermaLink="false">https://wonthechan.github.io/daily/2019-11-11-daily-42seoul/</guid><pubDate>Mon, 11 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;웹서핑 도중에 우연찮게 발견한 &lt;strong&gt;42 Seoul&lt;/strong&gt;. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[chan's devlog]]></title><description><![CDATA[조금씩 끄적이는 개발로그]]></description><link>https://wonthechan.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 11 Nov 2019 14:47:52 GMT</lastBuildDate><item><title><![CDATA[42 Seoul - 온라인 테스트 후기]]></title><description><![CDATA[웹서핑 도중에 우연찮게 발견한  42 Seoul .  정부 주도로 설립된 ‘이노베이션 아카데미’라는 기관에서 올해 새롭게 추진되는 SW 인재 양성 프로젝트라고 한다.  école 4…]]></description><link>https://wonthechan.github.io/daily/2019-11-11-daily-42seoul/</link><guid isPermaLink="false">https://wonthechan.github.io/daily/2019-11-11-daily-42seoul/</guid><pubDate>Mon, 11 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;웹서핑 도중에 우연찮게 발견한 &lt;strong&gt;42 Seoul&lt;/strong&gt;. &lt;/p&gt;
 &lt;p&gt;정부 주도로 설립된 ‘이노베이션 아카데미’라는 기관에서 올해 새롭게 추진되는 SW 인재 양성 프로젝트라고 한다. &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;école 42&lt;/p&gt;
@@ -7,10 +7,52 @@
 &lt;p&gt;지원절차는 가장 먼저 온라인 테스트를 치르고 통과를 한 경우 이후에 미팅 등 진행이 되는데 문제는.. 이미 지원자들이 너무 많아서 온라인 테스트를 통과하더라도 내년부터 시작되는 교육과정에 모두 합류 할 수는 없다는 점이다.그래서 선착순으로 지원인원을 받고 나머지 인원은 다음 차수로 넘어간다고 한다. &lt;/p&gt;
 &lt;p&gt;너무 늦게 신청한 감이 있어서 선발될 가능성은 매우 희박해 보였지만 경험해보는 것도 나쁘지 않은것같고 궁금하기도 해서 밑져야 본전이라는 생각으로 응시해보았다.&lt;/p&gt;
 &lt;h3 id=&quot;온라인-테스트-진행&quot;&gt;&lt;a href=&quot;#%EC%98%A8%EB%9D%BC%EC%9D%B8-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%A7%84%ED%96%89&quot; aria-label=&quot;온라인 테스트 진행 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;온라인 테스트 진행&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;....%5Cassets%5C2019-11-11%5C1.PNG&quot; alt=&quot;온라인테스트_안내&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 40.90909090909091%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABAklEQVQoz41SSW7EMAzz/9/Tc18xPaTjbJOtGS/Z9wCs5DRAUUyBHAjCsERRhMS75+Ht9oEgitC2LfZ9x7quDtu2OV6WBfM8X4IwZQlVFMiyDOXzCa01FIH5fDdNc1lU1FSstIFSCsZYx188hISstRjHEdM0XXc4DAOSNEWW50iSFAW5zQmahnRdB1tV6PvhukNe5y4lPu8SHuUZBKETTtPsYIqi73sneOZ5ggV+vxmCi+P4gSAMnZiUPqTvO+ZBvh8gpL/HI3F5cgzsmt2/EhVVXbs1GVzoGn5QVRaGWBvjxHg45zkS/stVcH5RHFNzTSdznMnmTuY8neN8GH/XeyX4DRumY4we42ssAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;온라인테스트_안내&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2bae0095b2bd280a12ea0317de25e81a/e41c6/1.png&quot;
+        srcset=&quot;/static/2bae0095b2bd280a12ea0317de25e81a/7c8aa/1.png 148w,
+/static/2bae0095b2bd280a12ea0317de25e81a/1e920/1.png 295w,
+/static/2bae0095b2bd280a12ea0317de25e81a/e41c6/1.png 590w,
+/static/2bae0095b2bd280a12ea0317de25e81a/8067e/1.png 885w,
+/static/2bae0095b2bd280a12ea0317de25e81a/53f39/1.png 1144w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;42서울 사이트에서 회원가입을 마치고 테스트 페이지를 접속하게 되면 이러한 안내사항들이 뜬다. 일반적인 코딩테스트와는 다르게 ‘게임’이라는 부분이 눈에 띈다.. 두근거리는 마음으로 시작.!&lt;/p&gt;
 &lt;h3 id=&quot;결과&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EA%B3%BC&quot; aria-label=&quot;결과 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결과&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;....%5Cassets%5C2019-11-11%5C2.PNG&quot; alt=&quot;온라인테스트_안내&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 29.964850615114237%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAsklEQVQY062QyQ6DMAxE8/8f2YVLQSIsScgKTD2pqNRDl0MtPWVzxmOrbhzR3lr0vcayeBhjMU0TrLUPnMM8z0/45uR+Nqa+887IvpO8kDNUihFB+FcoPQy4No24WzBVFwbe+3omTiqv64p93z+SS0GRPBVCqCIxJYQQkWTdtu2Fb2IHzFVaa5zOlzo/zoQzpEPCYnRZpDrjnRCDXRBF1RgTvHz2XgREKMtwjwTyi8ujmztl89YSOpF7zwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;온라인테스트_안내&quot;
+        title=&quot;&quot;
+        src=&quot;/static/615cab293ac13d93e09aa94afd6aa3b5/e41c6/2.png&quot;
+        srcset=&quot;/static/615cab293ac13d93e09aa94afd6aa3b5/7c8aa/2.png 148w,
+/static/615cab293ac13d93e09aa94afd6aa3b5/1e920/2.png 295w,
+/static/615cab293ac13d93e09aa94afd6aa3b5/e41c6/2.png 590w,
+/static/615cab293ac13d93e09aa94afd6aa3b5/8067e/2.png 885w,
+/static/615cab293ac13d93e09aa94afd6aa3b5/deca7/2.png 1138w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;게임 1&lt;/strong&gt;은 여러개의 타일중에서 타일들이 클릭되는 순서를 기억하는 기억력 테스트같은 문제였고 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;게임 2&lt;/strong&gt;는 탐색 문제처럼 함수를 만들어서 경로를 찾아나가는 형태였는데 코드로 작성할 부분은 전혀 없었고 그냥 마우스 클릭만을 통해서 해결할 수 있었다. 난이도는 게임 내에서 레벨이 올라갈수록 어려웠고 로직이 복잡해져서 끝까지 풀지는 못한것 같다.. 정말 코딩 경험이 전혀 없어도 푸는데 아무 지장이 없을 것 같았고 다만 논리력이 다소 요구되는 것으로 보였다.&lt;/p&gt;
 &lt;p&gt;요즘에는 전공자 비전공자 할 것 없이 양질의 SW 교육을 받을 수 있는 기회가 점점 많아지는 것 같다. 흔히 비전공자들은 자신들이 전공자들을 따라갈 수는 있을까..라고 걱정하는데 사실은 ‘대다수’의 경우 별로 큰 차이가 없는 것 같다. 주위를 보면 오히려 비전공자들의 경우 배움에 막힘이 없고 훨씬 더 빠르게 지식을 습득하는 것 같다. 아무래도 전공자이냐 아니냐 보다는 개발을 하고픈 열망이나 스스로 찾아서 배우려는 의지에 많이 좌우되는게 아닐까 싶다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[RoR] 더이상 쓸모없는 마이그레이션 파일 깔끔하게 지우기]]></title><description><![CDATA[모델을 다루다보면 새로운 칼럼을 추가하거나 삭제하는 일들이 빈번하게 생긴다. 그럴때마다 마이그레이션 파일을 새로 만들게 되는데 이전 마이그레이션 파일들을 지우고 싶을 때가 있다.! 그래서 migrate…]]></description><link>https://wonthechan.github.io/ruby/2019-11-07-rails-model-migration-tip/</link><guid isPermaLink="false">https://wonthechan.github.io/ruby/2019-11-07-rails-model-migration-tip/</guid><pubDate>Sat, 09 Nov 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/1034/1*usnQlDE-gCOmT7okziMfwQ.png&quot; alt=&quot;마이그레이션 파일들&quot;&gt;&lt;/p&gt;
