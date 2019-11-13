@@ -1,5 +1,5 @@
 ---
-title: '(Javascript) 자바스크립트 코딩 스타일 컨벤션 정리'
+title: '[Javascript] 자바스크립트 코딩 스타일 컨벤션 정리'
 date: 2019-11-13
 category: 'javascript'
 ---
