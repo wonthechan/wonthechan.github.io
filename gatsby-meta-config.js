@@ -1,8 +1,8 @@
 module.exports = {
   title: `chan's devlog`,
-  description: `조금씩 끄적이는 개발로그`,
+  description: `느리지만 꾸준히..!`,
   author: `wonthechan (Yechan Lim)`,
-  introduction: `Slow but steady..`,
+  introduction: `알고리즘,,스프링,,공부중.!!`,
   siteUrl: `https://wonthechan.github.io`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
